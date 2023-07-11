@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + Lit + TS</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@oddbird/popover-polyfill@latest/dist/popover.css"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@oddbird/popover-polyfill@latest"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <link rel="stylesheet" href="./src/index.css" />
+    <script type="module" src="/src/my-element.ts"></script>
+    <script type="module" src="/src/my-option.ts"></script>
+  </head>
+  <body>
+    <my-element>
+      <my-option>Slotted in index.html</my-option>
+    </my-element>
+  </body>
+</html>
