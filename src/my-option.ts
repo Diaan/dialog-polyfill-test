@@ -1,5 +1,5 @@
 import { LitElement, css, html } from 'lit';
-import { customElement } from 'lit/decorators.js';
+import { customElement, state } from 'lit/decorators.js';
 
 /**
  * An example element.
@@ -9,20 +9,27 @@ import { customElement } from 'lit/decorators.js';
  */
 @customElement('my-option')
 export class MyOption extends LitElement {
+  @state() counter = 0;
   render() {
-    return html`<slot></slot>`;
+    return html`<slot></slot><span> clicks= ${this.counter}</span>`;
   }
 
   constructor() {
     super();
-    this.addEventListener('click', () => console.log('clicked option'));
+    this.addEventListener('click', this.handleClick);
+  }
+
+  handleClick() {
+    console.log('clicked option');
+    this.counter++;
   }
 
   static styles = css`
     :host {
       border: 1px solid gold;
       padding: 2px 4px;
-      display: inline-flex;
+      display: flex;
+      flex-direction: column;
     }
   `;
 }

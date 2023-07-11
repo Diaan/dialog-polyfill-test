@@ -25,8 +25,10 @@ export class MyElement extends LitElement {
     popover
   > 
     <h1>dialog</h1>
+    <section>
     <my-option>Slotted in my-element</my-option>
     <slot></slot>
+    </section>
   </dialog>
     `;
   }
@@ -49,7 +51,6 @@ export class MyElement extends LitElement {
   height: fit-content;
   margin: auto;
   overflow: auto;
-  padding: 0.25em;
   position: fixed;
   width: fit-content;
   z-index: 2147483647;
@@ -58,7 +59,6 @@ export class MyElement extends LitElement {
   position: fixed;
   z-index: 2147483647;
   inset: 0;
-  padding: 0.25em;
   width: fit-content;
   height: fit-content;
   border-width: initial;
@@ -146,7 +146,7 @@ export class MyElement extends LitElement {
 
 dialog:popover-open {
   border: 0;
-  box-shadow: var(--sl-dropshadow-select-listbox);
+  box-shadow: rgb(153, 153, 153) 1px 1px 6px 0px;
   display: flex;
   opacity: 1;
   z-index: 1;
@@ -154,8 +154,11 @@ dialog:popover-open {
 
 
     dialog {
-      padding: 2rem;
-      gap: 1rem;
+      padding: 10px;
+    }
+    section {
+      display: flex;
+      gap: 10px;
     }
     dialog:popover-open {
       display: flex;
