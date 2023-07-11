@@ -26,7 +26,7 @@ export class MyElement extends LitElement {
   > 
     <h1>dialog</h1>
     <section>
-    <my-option>Slotted in my-element</my-option>
+    <my-option>Inserted in my-element</my-option>
     <slot></slot>
     </section>
   </dialog>
