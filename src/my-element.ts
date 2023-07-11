@@ -25,7 +25,7 @@ export class MyElement extends LitElement {
     popover
   > 
     <h1>dialog</h1>
-  <my-option>Slotted in my-element</my-option>
+    <my-option>Slotted in my-element</my-option>
     <slot></slot>
   </dialog>
     `;

@@ -10,8 +10,14 @@ import { customElement } from 'lit/decorators.js';
 @customElement('my-option')
 export class MyOption extends LitElement {
   render() {
-    return html`<slot @click="${() => console.log('clicked option')}"></slot>`;
+    return html`<slot></slot>`;
   }
+
+  constructor() {
+    super();
+    this.addEventListener('click', () => console.log('clicked option'));
+  }
+
   static styles = css`
     :host {
       border: 1px solid gold;
